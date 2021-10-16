@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Self Assessment - GOV.UK
+{% endblock %}
+
+{# {% import "includes/card-template.html" as card %} #}
+
+{% block content %}
+
+{% include 'includes/nav-combo-1.html' %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-three-quarters">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Are you sure you want to sign out?
+            </h1>
+          </legend>
+          <span id="changed-name-hint" class="govuk-hint govuk-!-padding-bottom-4">
+
+
+        </fieldset>
+      </div>
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Cancel",
+        classes: "govuk-button--secondary"
+      }) }}
+
+      	&nbsp;	&nbsp;
+
+      <button type="submit" class="govuk-button">
+        Sign out
+      </button>
+
+    </div>
+
+  </form>
+
+</div>
+
+{% endblock %}
