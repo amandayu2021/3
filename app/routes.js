@@ -20,8 +20,8 @@ router.post('/juggling-balls-answer', function (req, res) {
 
 
 
-// thisis for the mutiple 02_multiplechoices router information'
-router.post('/02_multiplechoices', function (req, res) {
+// thisis for the multi_choice routes use let xxx = something '
+router.post('/multi_choice/02_multiplechoices', function (req, res) {
 
   // Make a variable and give it the value from '02_multiplechoices'
   let numberamanda = req.session.data['id-for-5'];
@@ -29,23 +29,23 @@ router.post('/02_multiplechoices', function (req, res) {
   // Check whether the variable matches a condition
   if (numberamanda === "1"){
     // Send user to 1
-    res.redirect('/1')
+    res.redirect('/multi_choice/1')
   }
     if (numberamanda === "2"){
       // Send user to 2
-      res.redirect('/2')
+      res.redirect('/multi_choice/2')
   }
       if (numberamanda === "3"){
         // Send user to 2
-        res.redirect('/3')
+        res.redirect('/multi_choice/3')
   }
         if (numberamanda === "4"){
           // Send user to 2
-          res.redirect('/4')
+          res.redirect('/multi_choice/4')
   }
           if (numberamanda === "5"){
             // Send user to 2
-            res.redirect('/5')
+            res.redirect('/multi_choice/5')
   } else {
     // Send user to ineligible page
     res.redirect('/start')
